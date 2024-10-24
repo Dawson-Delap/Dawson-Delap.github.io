@@ -5,6 +5,7 @@
         h1{
             color: white;
             font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 0 black;
         }
         .lang:hover{
             transform: scale(1.3);
@@ -17,6 +18,14 @@
             height: 15vi;
             width: 15vi; 
             border: 5px solid black;
+            transition: transform 330ms ease-in-out;
+        }
+        .langtext{
+            text-align:left;
+            position: absolute;
+            font-size: 2vi;
+            margin-top: 4vh;
+            opacity: 0%;
         }
 
         @keyframes colors {
@@ -49,57 +58,67 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
         alt="css" style="background-color: grey; border-radius: 10px;" id="CSS">
         <img onmousemove=showjs() onmouseleave=hidejs() class="lang" src="https://static-00.iconduck.com/assets.00/javascript-icon-2048x2048-dc9qqnwh.png"
         alt="js" style="background-color: grey; border-radius: 10px;" id="JS">
-        <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="https://cdn2.iconfinder.com/data/icons/programming-50/64/206_programming-sql-data-database-512.png"
-        alt="sql" style="background-color: grey; border-radius: 10px;" id="SQL">
-        <h1 style="text-align:left; position: absolute; margin-left: 15vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="pythonh1">Python</h1>
-        <h1 style="text-align:left; position: absolute; margin-left: 30vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="htmlh1">HTML5</h1>
-        <h1 style="text-align:left; position: absolute; margin-left: 47vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="cssh1">CSS</h1>
-        <h1 style="text-align:left; position: absolute; margin-left: 61vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="jsh1">JavaScript</h1>
-        <h1 style="text-align:left; position: absolute; margin-left: 79vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="sqlh1">SQL</h1>
+        <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="https://clipart-library.com/2023/RcdgAAE9i.png"
+        alt="sql" style="background-color: grey; border-radius: 10px; object-fit:contain;" id="SQL">
+        <h1 class="langtext" style="margin-left: 14.5vw;" id="pythonh1">Python</h1>
+        <h1 class="langtext" style="margin-left: 30vw;" id="htmlh1">HTML5</h1>
+        <h1 class="langtext" style="margin-left: 47vw;" id="cssh1">CSS</h1>
+        <h1 class="langtext" style="margin-left: 60vw;" id="jsh1">JavaScript</h1>
+        <h1 class="langtext" style="margin-left: 79vw;" id="sqlh1">SQL</h1>
         <script>
             function showpy(){
                 const pythonid = document.getElementById("pythonh1");
-                pythonid.style.visibility = "visible";
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
             }
             function hidepy(){
                 const pythonid = document.getElementById("pythonh1");
-                pythonid.style.visibility = "hidden";
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
             }
 
             function showhtml(){
                 const pythonid = document.getElementById("htmlh1");
-                pythonid.style.visibility = "visible";
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
             }
             function hidehtml(){
                 const pythonid = document.getElementById("htmlh1");
-                pythonid.style.visibility = "hidden";
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
             }
 
             function showcss(){
                 const pythonid = document.getElementById("cssh1");
-                pythonid.style.visibility = "visible";
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
             }
             function hidecss(){
                 const pythonid = document.getElementById("cssh1");
-                pythonid.style.visibility = "hidden";
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
             }
 
             function showjs(){
                 const pythonid = document.getElementById("jsh1");
-                pythonid.style.visibility = "visible";
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
             }
             function hidejs(){
                 const pythonid = document.getElementById("jsh1");
-                pythonid.style.visibility = "hidden";
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
             }
 
             function showsql(){
                 const pythonid = document.getElementById("sqlh1");
-                pythonid.style.visibility = "visible";
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
             }
             function hidesql(){
                 const pythonid = document.getElementById("sqlh1");
-                pythonid.style.visibility = "hidden";
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
             }
         </script>
     </div>
