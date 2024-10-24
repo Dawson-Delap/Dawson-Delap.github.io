@@ -17,20 +17,67 @@
 </head>
 <body style="background-image:url('https://asset.gecdesigns.com/img/background-templates/dark-blue-background-with-the-diamond-pattern-template-sr06012408-1704699724568-cover.webp');
 text-align: center;">
-    <h1>WJBHID</h1>
-    <img class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
+    <h1>Languages</h1>
+    <img onmousemove=showpy() onmouseleave=hidepy() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
     style="background-color: grey; border-radius: 10px;" id="python">
-    <img class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png"
+    <img onmousemove=showhtml() onmouseleave=hidehtml()  class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png"
     style="background-color: grey; border-radius: 10px;" id="HTML">
-    <img class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
+    <img onmousemove=showcss() onmouseleave=hidecss() class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
     style="background-color: grey; border-radius: 10px;" id="CSS">
-    <img class="lang" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+    <img onmousemove=showjs() onmouseleave=hidejs() class="lang" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
     style="background-color: grey; border-radius: 10px;" id="JS">
-    <img class="lang" src="https://cdn2.iconfinder.com/data/icons/programming-50/64/206_programming-sql-data-database-512.png"
+    <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="https://cdn2.iconfinder.com/data/icons/programming-50/64/206_programming-sql-data-database-512.png"
     style="background-color: grey; border-radius: 10px;" id="SQL">
-    <br>
+    <h1 style="text-align:left; position: absolute; margin-left: 15vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="pythonh1">Python</h1>
+    <h1 style="text-align:left; position: absolute; margin-left: 30vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="htmlh1">HTML5</h1>
+    <h1 style="text-align:left; position: absolute; margin-left: 47vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="cssh1">CSS</h1>
+    <h1 style="text-align:left; position: absolute; margin-left: 61vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="jsh1">JavaScript</h1>
+    <h1 style="text-align:left; position: absolute; margin-left: 79vw; font-size: 2vi; margin-top: 4vh; visibility: hidden;" id="sqlh1">SQL</h1>
     <script>
+        function showpy(){
+            const pythonid = document.getElementById("pythonh1");
+            pythonid.style.visibility = "visible";
+        }
+        function hidepy(){
+            const pythonid = document.getElementById("pythonh1");
+            pythonid.style.visibility = "hidden";
+        }
 
+        function showhtml(){
+            const pythonid = document.getElementById("htmlh1");
+            pythonid.style.visibility = "visible";
+        }
+        function hidehtml(){
+            const pythonid = document.getElementById("htmlh1");
+            pythonid.style.visibility = "hidden";
+        }
+
+        function showcss(){
+            const pythonid = document.getElementById("cssh1");
+            pythonid.style.visibility = "visible";
+        }
+        function hidecss(){
+            const pythonid = document.getElementById("cssh1");
+            pythonid.style.visibility = "hidden";
+        }
+
+        function showjs(){
+            const pythonid = document.getElementById("jsh1");
+            pythonid.style.visibility = "visible";
+        }
+        function hidejs(){
+            const pythonid = document.getElementById("jsh1");
+            pythonid.style.visibility = "hidden";
+        }
+
+        function showsql(){
+            const pythonid = document.getElementById("sqlh1");
+            pythonid.style.visibility = "visible";
+        }
+        function hidesql(){
+            const pythonid = document.getElementById("sqlh1");
+            pythonid.style.visibility = "hidden";
+        }
     </script>
 </body>
 </html>
