@@ -22,8 +22,6 @@
             transition: transform 330ms ease-in-out;
         }
         .langtext{
-            text-align:left;
-            position: absolute;
             font-size: 2vi;
             margin-top: 4vh;
             opacity: 0%;
@@ -60,6 +58,15 @@
             border-radius: 20px;
             margin-top: 1px;
         }
+        .centerdiv{
+            display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh;
+        }
+        .big{
+            transition: transform 330ms ease-in-out;
+        }
+        .big:hover{
+            transform: scale(1.3);
+        }
         
 
         @keyframes colors {
@@ -78,27 +85,44 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
     <div id="intro" style="height: 70vh; text-align: left;">
         <h1 style="margin-left: 3vw; font-size: 5vi; margin-top: 30vh;">Dawson Delap</h1>
         <br>
-        <a href="https://www.linkedin.com/in/dawson-delap-b54045328/" target="_blank"><img style=" position: absolute; height: 2vi; width: 2vi; margin-left: 4vw; top: 43vh; border-radius: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin"></a>
-        <a href="https://github.com/Dawson-Delap" target="_blank"><img style=" position: absolute; height: 2vi; width: 2vi; margin-left: 7vw; top: 43vh; background-color: grey; border-radius: 20px;" src="https://sue.eu/wp-content/uploads/sites/6/2022/11/github-logo-920x920-sue-v01.png" alt="github"></a>
+        <a href="https://www.linkedin.com/in/dawson-delap-b54045328/" target="_blank"><img class="big" style=" position: absolute; height: 2vi; width: 2vi; margin-left: 4vw; top: 43vh; border-radius: 20px;" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin"></a>
+        <a href="https://github.com/Dawson-Delap" target="_blank"><img class="big" style=" position: absolute; height: 2vi; width: 2vi; margin-left: 7vw; top: 43vh; background-color: grey; border-radius: 20px;" src="https://sue.eu/wp-content/uploads/sites/6/2022/11/github-logo-920x920-sue-v01.png" alt="github"></a>
     </div>
 <!--Languagues-->
     <div id="Languages" style="height: 70vh;">
         <h1 style="margin-bottom: 5vh; font-size: 3vi;">Languages</h1>
-        <img onmousemove=showpy() onmouseleave=hidepy() onclick=rotateypy() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
-        alt="python" style="background-color: grey; border-radius: 20px;" id="python">
-        <img onmousemove=showhtml() onmouseleave=hidehtml()  class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png"
-        alt="html" style="background-color: grey; border-radius: 20px;" id="HTML">
-        <img onmousemove=showcss() onmouseleave=hidecss() class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
-        alt="css" style="background-color: grey; border-radius: 20px;" id="CSS">
-        <img onmousemove=showjs() onmouseleave=hidejs() class="lang" src="https://static-00.iconduck.com/assets.00/javascript-icon-2048x2048-dc9qqnwh.png"
-        alt="js" style="background-color: grey; border-radius: 20px;" id="JS">
-        <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="SQL.png"
-        alt="sql" style="background-color: grey; border-radius: 20px; object-fit:contain;" id="SQL">
-        <h1 class="langtext" style="margin-left: 14.5vw;" id="pythonh1">Python</h1>
-        <h1 class="langtext" style="margin-left: 30vw;" id="htmlh1">HTML5</h1>
-        <h1 class="langtext" style="margin-left: 47vw;" id="cssh1">CSS</h1>
-        <h1 class="langtext" style="margin-left: 60vw;" id="jsh1">JavaScript</h1>
-        <h1 class="langtext" style="margin-left: 79vw;" id="sqlh1">SQL</h1>
+        <div class="centerdiv">
+            <div style="text-align: center; justify-content: center;">
+                <img onmousemove=showpy() onmouseleave=hidepy() onclick=rotateypy() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
+                alt="python" style="background-color: grey; border-radius: 20px;" id="python">
+                <h1 class="langtext" id="pythonh1">Python</h1>
+            </div>
+
+            <div style="text-align: center;">
+                <img onmousemove=showhtml() onmouseleave=hidehtml()  class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png"
+                alt="html" style="background-color: grey; border-radius: 20px;" id="HTML">
+                <h1 class="langtext" id="htmlh1">HTML5</h1>
+            </div>
+
+            <div style="text-align: center;">
+                <img onmousemove=showcss() onmouseleave=hidecss() class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
+                alt="css" style="background-color: grey; border-radius: 20px;" id="CSS">
+                <h1 class="langtext" id="cssh1">CSS</h1>
+            </div>
+
+            <div style="text-align: center;">
+                <img onmousemove=showjs() onmouseleave=hidejs() class="lang" src="https://static-00.iconduck.com/assets.00/javascript-icon-2048x2048-dc9qqnwh.png"
+                alt="js" style="background-color: grey; border-radius: 20px;" id="JS">
+                <h1 class="langtext" id="jsh1">JavaScript</h1>
+            </div>
+
+            <div style="text-align: center;">
+                <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="SQL.png"
+                alt="sql" style="background-color: grey; border-radius: 20px; object-fit:contain;" id="SQL">
+                <h1 class="langtext" id="sqlh1">SQL</h1>
+            </div>
+        </div>
+
         <script>
             function showpy(){
                 const pythonid = document.getElementById("pythonh1");
@@ -169,7 +193,15 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
     </div>
 <!--Things I made-->
     <h1 style="margin-bottom: 5vh;">Things I Made</h1>
-    <div style="text-align: center; align-items: center; justify-items: center; margin-bottom: 5vh;">
+    <div class="centerdiv">
+        <!-- template for new project
+        <div class="made" id="PROJECT ID">
+            <a href="LINK TO PROJECT" target="_blank"><img src="SCREENSHOT" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
+            <h1 style="margin-top: .6vi; font-size: 2vi; margin-bottom: .6vi">TEXT FOR PROJECT</h1>
+            <img class="tinylang" src="LANG PICTURE">
+            <img class="tinylang" src="LANG PICTURE">
+        </div> 
+        -->
         <div class="made" id="cookieclicker">
             <a href="cookieclick.html" target="_blank"><img src="cookieclicker.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
             <h1 style="margin-top: .6vi; font-size: 2vi; margin-bottom: .6vi">Cookieclicker</h1>
@@ -179,10 +211,16 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
         </div>
 
         <div class="made" id="slotmachine">
-            <a href="slots.png" target="_blank"><img src="slots.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/slotmachine.py" target="_blank"><img src="slots.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
                 <h1 style="margin-top: .6vi; font-size: 2vi; margin-bottom: .6vi">Slotmachine</h1>
                 <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png">
                 <img class="tinylang" src="SQL.png">
+        </div> 
+
+        <div class="made" id="rpc">
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/rockpaperscissors(remaster).py" target="_blank"><img src="rpc.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
+            <h1 style="margin-top: .6vi; font-size: 1.6vi; margin-bottom: .6vi">Rock Paper Scissors</h1>
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png">
         </div> 
     </div>
 </body>
