@@ -9,7 +9,6 @@
             -webkit-text-stroke-color: black;
         }
         .lang:hover{
-            transform: scale(1.3);
             background-color: red;
             animation-name: colors;
             animation-duration: 4s;
@@ -19,12 +18,12 @@
             height: 15vi;
             width: 15vi; 
             border: 5px solid black;
-            transition: transform 330ms ease-in-out;
         }
         .langtext{
             font-size: 2vi;
-            margin-top: 4vh;
+            margin-top: 1vi;
             opacity: 0%;
+            margin-top: auto;
         }
         .cert:hover{
             transform: scale(1.3);
@@ -92,31 +91,31 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
     <div id="Languages" style="height: 70vh;">
         <h1 style="margin-bottom: 5vh; font-size: 3vi;">Languages</h1>
         <div class="centerdiv">
-            <div style="text-align: center; justify-content: center;">
+            <div class="big" style="text-align: center; justify-content: center;">
                 <img onmousemove=showpy() onmouseleave=hidepy() onclick=rotateypy() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
                 alt="python" style="background-color: grey; border-radius: 20px;" id="python">
                 <h1 class="langtext" id="pythonh1">Python</h1>
             </div>
 
-            <div style="text-align: center;">
+            <div class="big" style="text-align: center;">
                 <img onmousemove=showhtml() onmouseleave=hidehtml()  class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png"
                 alt="html" style="background-color: grey; border-radius: 20px;" id="HTML">
                 <h1 class="langtext" id="htmlh1">HTML5</h1>
             </div>
 
-            <div style="text-align: center;">
+            <div class="big" style="text-align: center;">
                 <img onmousemove=showcss() onmouseleave=hidecss() class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
                 alt="css" style="background-color: grey; border-radius: 20px;" id="CSS">
                 <h1 class="langtext" id="cssh1">CSS</h1>
             </div>
 
-            <div style="text-align: center;">
+            <div class="big" style="text-align: center;">
                 <img onmousemove=showjs() onmouseleave=hidejs() class="lang" src="https://static-00.iconduck.com/assets.00/javascript-icon-2048x2048-dc9qqnwh.png"
                 alt="js" style="background-color: grey; border-radius: 20px;" id="JS">
                 <h1 class="langtext" id="jsh1">JavaScript</h1>
             </div>
 
-            <div style="text-align: center;">
+            <div class="big" style="text-align: center;">
                 <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="SQL.png"
                 alt="sql" style="background-color: grey; border-radius: 20px; object-fit:contain;" id="SQL">
                 <h1 class="langtext" id="sqlh1">SQL</h1>
