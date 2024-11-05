@@ -91,7 +91,7 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
         <h1 style="margin-bottom: 5vh; font-size: 3vi;">Languages</h1>
         <div class="centerdiv">
             <div class="big" style="text-align: center; justify-content: center;">
-                <img onmousemove=showpy() onmouseleave=hidepy() onclick=rotateypy() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
+                <img onmousemove=showpy() onmouseleave=hidepy() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
                 alt="python" style="background-color: grey; border-radius: 20px;" id="python">
                 <h1 class="langtext" id="pythonh1">Python</h1>
             </div>
@@ -118,6 +118,12 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
                 <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="SQL.png"
                 alt="sql" style="background-color: grey; border-radius: 20px; object-fit:contain;" id="SQL">
                 <h1 class="langtext" id="sqlh1">SQL</h1>
+            </div>
+
+            <div class="big" style="text-align: center; justify-content: center;">
+                <img onmousemove=showcpp() onmouseleave=hidecpp() class="lang" src="https://cdn-icons-png.flaticon.com/256/6132/6132222.png"
+                alt="cpp" style="background-color: grey; border-radius: 20px;" id="cpp">
+                <h1 class="langtext" id="cpph1">C++ (WIP)</h1>
             </div>
         </div>
 
@@ -173,6 +179,17 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
             }
             function hidesql(){
                 const pythonid = document.getElementById("sqlh1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+
+            function showcpp(){
+                const pythonid = document.getElementById("cpph1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hidecpp(){
+                const pythonid = document.getElementById("cpph1");
                 pythonid.style.opacity= "0%";
                 pythonid.style.transition= "opacity 0.5s";
             }
