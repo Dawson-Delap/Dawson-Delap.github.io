@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    #slot1{grid-area: left;}
+    #slot2{grid-area: center;}
+    #slot3{grid-area: right;}
+    #bottomleft{grid-area: bottomL;}
+    #bottommid{grid-area: bottomM;}
+    #bottomright{grid-area: bottomR;}
+body {
+    display: grid;
+    grid-template-areas:
+    'left center right'
+    'bottomL bottomM bottomR';
+    background-color: LightSlateGrey;
+    gap: 10px;
+    padding: 10px;  
+}
+h1{
+    font-family:monospace;
+}
+button{
+    font-family:monospace;
+}
+div{
+    width: 30vw;
+}
+.slot{
+    text-align: center;
+    font-size: 5vi;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    height: 54vh;
+}
+.bottom{
+    text-align: center;
+    font-size: 1vi;
+    justify-content: center;
+    border: 10px solid black;
+}
+</style>
+</head>
+<body>
+    <script>
+        var gains = "";
+        var count = 0;
+        var inf = 0;
+        var money = 0;
+        var pics = [
+            "💩",
+            "💀",
+            "👍",
+            "💅",
+            "🐁",
+            "🦖",
+            "🎄",
+            "7️⃣",
+        ]
+        var col =[
+            "red",
+            "orange",
+            "yellow",
+            "limegreen",
+            "blue",
+            "purple",
+            "cyan",
+            "gold",
+        ]
+        function disablebut(){
+            document.getElementById("spinbut").disabled = true;
+        }
+        function enablebut(){
+            document.getElementById("spinbut").disabled = false;
+        }
+        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
+        const spin = async() => {
+            disablebut();
+            for (let i = 0; i < pics.length; i++){
+                const slot1 = document.getElementById("slot1");
+                var slot1pic = Math.floor(Math.random() * 8)
+                slot1.innerHTML = pics[slot1pic];
+                slot1.style.background = col[slot1pic];
+                await sleep(100)
+            }
+            for (let i = 0; i < pics.length; i++){
+                const slot2 = document.getElementById("slot2");
+                var slot2pic = Math.floor(Math.random() * 8)
+                slot2.innerHTML = pics[slot2pic];
+                slot2.style.background = col[slot2pic];
+                await sleep(100)
+            }
+            for (let i = 0; i < pics.length; i++){
+                const slot3 = document.getElementById("slot3");
+                var slot3pic = Math.floor(Math.random() * 8)
+                slot3.innerHTML = pics[slot3pic];
+                slot3.style.background = col[slot3pic];
+                await sleep(100)
+            }
+            
+            if(slot1.innerHTML == slot2.innerHTML && slot2.innerHTML == slot3.innerHTML){
+                money += 1000;
+                document.getElementById("moneyshow").innerHTML = "$" + money;
+                var gaintext = "+$1000 on roll " + count + "<br>" + gains;
+                document.getElementById("lastgain").innerHTML = gaintext;
+                gains = document.getElementById("lastgain").innerHTML;
+            }else{
+                document.getElementById("moneyshow").innerHTML = "$" + money;
+            }
+            count += 1;
+            document.getElementById("rolls").innerHTML = "Rolls: " + count;
+            if (inf == 0){
+                enablebut();
+            }else if (inf == 1){
+                spin();
+            }
+        }
+        function infinite(){
+            inf = 1;
+            document.getElementById("infinitebut").disabled = true;
+            document.getElementById("finitebut").disabled = false;
+        }
+        function finite(){
+            inf = 0;
+            document.getElementById("infinitebut").disabled = false;
+            document.getElementById("finitebut").disabled= true;
+        }
+    </script>
+<!--slotsV-->
+<div class="slot" id="slot1">
+    <h1>slot1</h1>
+</div>
+
+<div class="slot" id="slot2">
+    <h1>slot2</h1>
+</div>
+
+<div class="slot" id="slot3" >
+    <h1>slot3</h1>
+</div>
+
+
+<!--bottom infoV-->
+<div class="bottom" id="bottomleft" style=" height: 32vh; border: 10px outset white;">
+    <button onclick=infinite() style="height: 32vh; width: 15vw; float:left; font-size: 2vi;" id="infinitebut">Automatic</button>
+    <button onclick=finite() style="height: 32vh; width: 15vw; font-size: 2vi;" disabled="true" id="finitebut">Manual</button>
+</div>
+<div class="bottom" id="bottommid" style=" height: 32vh; border: 10px outset gold;">
+    <button onclick=spin() style="height: 32vh; width: 30vw; background-color: gold; font-size: 7vi;" id="spinbut">Spin</button>
+</div>
+<div class="bottom" id="bottomright" style=" height: 32vh; border: 10px outset white; background-color: rgb(212, 211, 211); overflow: scroll;">
+    <h1 id="moneyshow">$0</h1>
+    <h1 id="rolls">Rolls: </h1>
+    <h1>Gains:</h1>
+    <h1 id="lastgain"></h1>
+</div>
+<!--bottom info^-->
+</body>
+</html>
