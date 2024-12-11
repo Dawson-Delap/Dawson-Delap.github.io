@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--390 844-->
     <style>
-    @media screen and (min-width: 390px) {
+    @media only screen and (max-width: 390px) {
         h1{
             color: white;
             font-family: Arial, Helvetica, sans-serif;
@@ -78,6 +79,95 @@
         80% {background: cyan;}
         100% {background: purple;}
         
+        }
+    }
+    @media only screen and (min-width: 391px) {
+        h1{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-text-stroke-width: .1vi;
+            -webkit-text-stroke-color: black;
+        }
+        .lang:hover{
+            background-color: red;
+            animation-name: colors;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        .lang{
+            height: 15vi;
+            width: 15vi; 
+            border: 5px solid black;
+        }
+        .langtext{
+            font-size: 2vi;
+            margin-top: 1vi;
+            opacity: 0%;
+            margin-top: auto;
+        }
+        .cert:hover{
+            transform: scale(1.3);
+        }
+        .cert{
+            height: 15vi;
+            width: 20vi;
+            border: 5px solid black;
+            border-radius: 20px;
+            transition: transform 330ms ease-in-out;
+        }
+        .made:hover{
+            transform: scale(1.3);
+        }
+        .made{
+            transition: transform 330ms ease-in-out;
+            height: 14vi; 
+            width: 15vi; 
+            background-color: grey; 
+            border-radius: 20px; 
+            border: 5px solid black; 
+            justify-content: center; 
+            align-items: center;
+            display: block;
+
+        }
+        .tinylang{
+            height: 1.5vi;
+            width: 1.5vi;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 1px;
+        }
+        .centerdiv{
+            display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh;
+        }
+        .big{
+            transition: transform 330ms ease-in-out;
+        }
+        .big:hover{
+            transform: scale(1.3);
+        }
+        
+
+        @keyframes colors {
+        0%   {background:  red;}
+        20%  {background: orange;}
+        40%  {background: yellow;}
+        60% {background: limegreen;}
+        80% {background: cyan;}
+        100% {background: purple;}
+        
+        }
+
+        #software{
+            box-shadow:
+            inset 0 0 50px #fff,
+            inset 20px 0 80px gold,
+            inset -20px 0 80px yellow,
+            inset 20px 0 300px gold,
+            inset -20px 0 300px yellow,
+            0 0 50px #fff,
+            -10px 0 80px gold,
+            10px 0 80px yellow;
         }
     }
     </style>
@@ -201,7 +291,7 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
 <!--Certification-->
     <div>
         <h1 style="font-size: 3vi;">Certifications</h1>
-        <img class="cert" style="height: 22.5vi; width: 30vi;" src="sofwaredev.jpg">
+        <img class="cert" style="height: 22.5vi; width: 30vi;" id="software" src="sofwaredev.jpg">
     </div>
     <div style="margin-bottom: 10vh;">
         <img class="cert" src="DD_Python_Aug 28.jpg">
