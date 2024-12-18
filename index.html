@@ -4,84 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--390 844-->
     <style>
-    @media only screen and (max-width: 390px) {
-        h1{
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            -webkit-text-stroke-width: .1vi;
-            -webkit-text-stroke-color: black;
-        }
-        .lang:hover{
-            background-color: red;
-            animation-name: colors;
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-        }
-        .lang{
-            height: 15vi;
-            width: 15vi; 
-            border: 5px solid black;
-        }
-        .langtext{
-            font-size: 2vi;
-            margin-top: 1vi;
-            opacity: 0%;
-            margin-top: auto;
-        }
-        .cert:hover{
-            transform: scale(1.3);
-        }
-        .cert{
-            height: 15vi;
-            width: 20vi;
-            border: 5px solid black;
-            border-radius: 20px;
-            transition: transform 330ms ease-in-out;
-        }
-        .made:hover{
-            transform: scale(1.3);
-        }
-        .made{
-            transition: transform 330ms ease-in-out;
-            height: 14vi; 
-            width: 15vi; 
-            background-color: grey; 
-            border-radius: 20px; 
-            border: 5px solid black; 
-            justify-content: center; 
-            align-items: center;
-            display: block;
-
-        }
-        .tinylang{
-            height: 1.5vi;
-            width: 1.5vi;
-            border: 1px solid black;
-            border-radius: 20px;
-            margin-top: 1px;
-        }
-        .centerdiv{
-            display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh;
-        }
-        .big{
-            transition: transform 330ms ease-in-out;
-        }
-        .big:hover{
-            transform: scale(1.3);
-        }
-        
-
-        @keyframes colors {
-        0%   {background:  red;}
-        20%  {background: orange;}
-        40%  {background: yellow;}
-        60% {background: limegreen;}
-        80% {background: cyan;}
-        100% {background: purple;}
-        
-        }
-    }
-    @media only screen and (min-width: 391px) {
+    @media only screen and (max-width: 480px) {
         h1{
             color: white;
             font-family: Arial, Helvetica, sans-serif;
@@ -168,55 +91,206 @@
             0 0 50px #fff,
             -10px 0 80px gold,
             10px 0 80px yellow;
+            height: 22.5vi; width: 30vi;
         }
+
+        #body{
+            background-image:url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWV3LTAxM18xXzEuanBn.jpg');
+            text-align: center; background-repeat:no-repeat; background-size: cover; background-attachment: fixed;
+        }
+        #intro{height: 70vh; text-align: left;}
+        #name{margin-left: 3vw; font-size: 5vi; margin-top: 30vh; margin-bottom: auto;}
+        #linkedin{height: 2vi; width: 2vi; margin-left: 4vw; border-radius: 20px; margin-top: auto;}
+        #github{height: 2vi; width: 2vi; margin-left: 1vw; background-color: grey; border-radius: 20px;}
+        #languages{height: 70vh;}
+        #langtitle{margin-bottom: 5vh; font-size: 3vi;}
+        #python{background: grey; border-radius: 70px;}
+
+        .center{
+            text-align: center;
+        }
+        #HTML{background:grey; border-radius: 70px;}
+        #CSS{background: grey; border-radius: 70px;}
+        #JS{background:grey; border-radius: 70px;}
+        #SQL{background: grey; border-radius: 70px; object-fit:contain;}
+        #cpp{background: grey; border-radius: 70px;}
+        #certdiv{margin-bottom: 10vh;}
+        #thingstitle{margin-bottom: 5vh; font-size: 3vi;}
+        .projecttext{margin-top: .6vi; font-size: 1.5vi; margin-bottom: .6vi}
+        .projectpic{height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;}
+        #certtitle{font-size: 3vi;}
+    }
+    @media only screen and (min-width: 481px) {
+        h1{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-text-stroke-width: .1vi;
+            -webkit-text-stroke-color: black;
+        }
+        .lang:hover{
+            background-color: red;
+            animation-name: colors;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        .lang{
+            height: 13vi;
+            width: 13vi; 
+            border: 5px solid black;
+        }
+        .langtext{
+            font-size: 2vi;
+            margin-top: 1vi;
+            opacity: 0%;
+            margin-top: auto;
+        }
+        .cert:hover{
+            transform: scale(1.3);
+        }
+        .cert{
+            height: 15vi;
+            width: 20vi;
+            border: 5px solid black;
+            border-radius: 20px;
+            transition: transform 330ms ease-in-out;
+        }
+        .made:hover{
+            transform: scale(1.3);
+        }
+        .made{
+            transition: transform 330ms ease-in-out;
+            height: 14vi; 
+            width: 15vi; 
+            background-color: grey; 
+            border-radius: 20px; 
+            border: 5px solid black; 
+            justify-content: center; 
+            align-items: center;
+            display: block;
+
+        }
+        .tinylang{
+            height: 1.5vi;
+            width: 1.5vi;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 1px;
+        }
+        .centerdiv{
+            display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh;
+        }
+        .big{
+            transition: transform 330ms ease-in-out;
+        }
+        .big:hover{
+            transform: scale(1.3);
+        }
+        
+
+        @keyframes colors {
+        0%   {background:  red;}
+        20%  {background: orange;}
+        40%  {background: yellow;}
+        60% {background: limegreen;}
+        80% {background: cyan;}
+        100% {background: purple;}
+        
+        }
+
+        #software{
+            box-shadow:
+            inset 0 0 50px #fff,
+            inset 20px 0 80px gold,
+            inset -20px 0 80px yellow,
+            inset 20px 0 300px gold,
+            inset -20px 0 300px yellow,
+            0 0 50px #fff,
+            -10px 0 80px gold,
+            10px 0 80px yellow;
+            height: 18vi; width: 24vi;
+        }
+
+        #body{
+            background-image:url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWV3LTAxM18xXzEuanBn.jpg');
+            text-align: center; background-repeat:no-repeat; background-size: cover; background-attachment: fixed;
+        }
+        #intro{height: 70vh; text-align: left;}
+        #name{margin-left: 3vw; font-size: 5vi; margin-top: 30vh; margin-bottom: auto;}
+        #linkedin{height: 2vi; width: 2vi; margin-left: 4vw; border-radius: 20px; margin-top: auto;}
+        #github{height: 2vi; width: 2vi; margin-left: 1vw; background-color: grey; border-radius: 20px;}
+        #languages{height: 70vh;}
+        #langtitle{margin-bottom: 5vh; font-size: 3vi;}
+        #python{background: grey; border-radius: 70px;}
+
+        .center{
+            text-align: center;
+        }
+        #HTML{background:grey; border-radius: 70px;}
+        #CSS{background: grey; border-radius: 70px;}
+        #JS{background:grey; border-radius: 70px;}
+        #SQL{background: grey; border-radius: 70px; object-fit:contain;}
+        #cpp{background: grey; border-radius: 70px;}
+        #swift{background: grey; border-radius: 70px;}
+        #certdiv{margin-bottom: 10vh;}
+        #thingstitle{margin-bottom: 5vh; font-size: 3vi;}
+        .projecttext{margin-top: .6vi; font-size: 1.5vi; margin-bottom: .6vi}
+        .projectpic{height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;}
+        #certtitle{font-size: 3vi;}
+        #langdiv{display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh;}
+        #thingsdiv{flex-wrap: wrap;}
     }
     </style>
 </head>
-<body style="background-image:url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zMDktYWV3LTAxM18xXzEuanBn.jpg');
-text-align: center; background-repeat:no-repeat; background-size: cover; background-attachment: fixed;">
-    <div id="intro" style="height: 70vh; text-align: left;">
-        <h1 style="margin-left: 3vw; font-size: 5vi; margin-top: 30vh; margin-bottom: auto;">Dawson Delap</h1>
-        <a href="https://www.linkedin.com/in/dawson-delap-b54045328/" target="_blank"><img class="big" style=" height: 2vi; width: 2vi; margin-left: 4vw; border-radius: 20px; margin-top: auto;" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin"></a>
-        <a href="https://github.com/Dawson-Delap" target="_blank"><img class="big" style="  height: 2vi; width: 2vi; margin-left: 1vw; background-color: grey; border-radius: 20px;" src="https://sue.eu/wp-content/uploads/sites/6/2022/11/github-logo-920x920-sue-v01.png" alt="github"></a>
+<body id="body">
+    <div id="intro">
+        <h1 id="name">Dawson Delap</h1>
+        <a href="https://www.linkedin.com/in/dawson-delap-b54045328/" target="_blank"><img class="big" id="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin"></a>
+        <a href="https://github.com/Dawson-Delap" target="_blank"><img class="big" id="github" src="https://sue.eu/wp-content/uploads/sites/6/2022/11/github-logo-920x920-sue-v01.png" alt="github"></a>
     </div>
 <!--Languagues-->
-    <div id="Languages" style="height: 70vh;">
-        <h1 style="margin-bottom: 5vh; font-size: 3vi;">Languages</h1>
-        <div class="centerdiv">
-            <div class="big" style="text-align: center; justify-content: center;">
+    <div id="Languages" class="center">
+        <h1 id="langtitle">Languages</h1>
+        <div class="centerdiv" id="langdiv">
+            <div class="big" class="center">
                 <img onmousemove=showpy() onmouseleave=hidepy() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png"
-                alt="python" style="background: grey; border-radius: 70px;" id="python">
+                alt="python" id="python">
                 <h1 class="langtext" id="pythonh1">Python</h1>
             </div>
 
-            <div class="big" style="text-align: center;">
+            <div class="big" class="center">
                 <img onmousemove=showhtml() onmouseleave=hidehtml()  class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png"
-                alt="html" style="background:grey; border-radius: 70px;" id="HTML">
+                alt="html" id="HTML">
                 <h1 class="langtext" id="htmlh1">HTML5</h1>
             </div>
 
-            <div class="big" style="text-align: center;">
+            <div class="big" class="center">
                 <img onmousemove=showcss() onmouseleave=hidecss() class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
-                alt="css" style="background: grey; border-radius: 70px;" id="CSS">
+                alt="css" id="CSS">
                 <h1 class="langtext" id="cssh1">CSS</h1>
             </div>
 
-            <div class="big" style="text-align: center;">
+            <div class="big" class="center">
                 <img onmousemove=showjs() onmouseleave=hidejs() class="lang" src="https://static-00.iconduck.com/assets.00/javascript-icon-2048x2048-dc9qqnwh.png"
-                alt="js" style="background:grey; border-radius: 70px;" id="JS">
+                alt="js" id="JS">
                 <h1 class="langtext" id="jsh1">JavaScript</h1>
             </div>
-
-            <div class="big" style="text-align: center;">
+            <br>
+            <div class="big" class="center">
                 <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="SQL.png"
-                alt="sql" style="background: grey; border-radius: 70px; object-fit:contain;" id="SQL">
+                alt="sql" id="SQL">
                 <h1 class="langtext" id="sqlh1">SQL</h1>
             </div>
 
-            <div class="big" style="text-align: center; justify-content: center;">
+            <div class="big" class="center">
                 <img onmousemove=showcpp() onmouseleave=hidecpp() class="lang" src="https://cdn-icons-png.flaticon.com/256/6132/6132222.png"
-                alt="cpp" style="background: grey; border-radius: 70px;" id="cpp">
+                alt="cpp" id="cpp">
                 <h1 class="langtext" id="cpph1">C++</h1>
+            </div>
+
+            <div class="big" class="center">
+                <img onmousemove=showswift() onmouseleave=hideswift() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png"
+                alt="swift" id="swift">
+                <h1 class="langtext" id="swifth1">Swift</h1>
             </div>
         </div>
 
@@ -286,14 +360,24 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
                 pythonid.style.opacity= "0%";
                 pythonid.style.transition= "opacity 0.5s";
             }
+            function showswift(){
+                const pythonid = document.getElementById("swifth1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hideswift(){
+                const pythonid = document.getElementById("swifth1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
         </script>
     </div>
 <!--Certification-->
     <div>
-        <h1 style="font-size: 3vi;">Certifications</h1>
-        <img class="cert" style="height: 22.5vi; width: 30vi;" id="software" src="sofwaredev.jpg">
+        <h1 id="certtitle">Certifications</h1>
+        <img class="cert" id="software" src="sofwaredev.jpg">
     </div>
-    <div style="margin-bottom: 10vh;">
+    <div id="certdiv">
         <img class="cert" src="DD_Python_Aug 28.jpg">
         <img class="cert" src="DD_HTML-CSS_Sep6.jpg">
         <img class="cert" src="DD_JavaScript_Sep10.jpg">
@@ -301,61 +385,66 @@ text-align: center; background-repeat:no-repeat; background-size: cover; backgro
         <img class="cert" src="DD_Databases_Sep23 (1).jpg">
         <img class="cert" src="DD_HTML5Applications_Sept26.jpg">
         <img class="cert" src="DD_Data-Analytics_Dec6.jpg">
+        <img class="cert" src="DD_DCM_Oct15.jpg">
     </div>
 <!--Things I made-->
-    <h1 style="margin-bottom: 5vh; font-size: 3vi;">Things I Made</h1>
-    <div class="centerdiv">
+    <h1 id="thingstitle">Things I Made</h1>
+    <div class="centerdiv" id="thingsdiv">
         <!-- template for new project
         <div class="made" id="PROJECT ID">
-            <a href="LINK TO PROJECT" target="_blank"><img src="SCREENSHOT" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
-            <h1 style="margin-top: .6vi; font-size: 2vi; margin-bottom: .6vi">TEXT FOR PROJECT</h1>
+            <a href="LINK TO PROJECT" target="_blank"><img src="SCREENSHOT" class="projectpic"></a>
+            <h1 class="projecttext">TEXT FOR PROJECT</h1>
             <img class="tinylang" src="LANG PICTURE">
             <img class="tinylang" src="LANG PICTURE">
         </div> 
         -->
         <div class="made" id="cookieclicker">
-            <a href="cookieclick.html" target="_blank"><img src="cookieclicker.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
-            <h1 style="margin-top: .6vi; font-size: 2vi; margin-bottom: .6vi">Cookieclicker</h1>
+            <a href="cookieclick.html" target="_blank"><img src="cookieclicker.png" class="projectpic"></a>
+            <h1 class="projecttext">Cookieclicker</h1>
             <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png">
             <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png">
             <img class="tinylang" src="https://static-00.iconduck.com/assets.00/javascript-icon-2048x2048-dc9qqnwh.png">
         </div>
-
+        <div class="made" id="htmlslots">
+            <a href="htmlslotmachine.html" target="_blank"><img src="htmlslots.png" class="projectpic"></a>
+            <h1 class="projecttext">Slot Machine(HTML)</h1>
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png">
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png">
+            <img class="tinylang" src="https://static-00.iconduck.com/assets.00/javascript-icon-2048x2048-dc9qqnwh.png">
+        </div> 
         <div class="made" id="slotmachine">
-            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/slotmachine.py" target="_blank"><img src="slots.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
-                <h1 style="margin-top: .6vi; font-size: 2vi; margin-bottom: .6vi">Slotmachine</h1>
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/slotmachine.py" target="_blank"><img src="slots.png" class="projectpic"></a>
+                <h1 class="projecttext">Slotmachine</h1>
                 <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png">
         </div> 
 
         <div class="made" id="rpc">
-            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/rockpaperscissors(remaster).py" target="_blank"><img src="rpc.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
-            <h1 style="margin-top: .6vi; font-size: 1.5vi; margin-bottom: .6vi">Rock Paper Scissors</h1>
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/rockpaperscissors(remaster).py" target="_blank"><img src="rpc.png" class="projectpic"></a>
+            <h1 class="projecttext">Rock Paper Scissors</h1>
             <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png">
         </div> 
 
         <div class="made" id="blackjack">
-            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/specialblackjack.py" target="_blank"><img src="blackjack.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
-            <h1 style="margin-top: .6vi; font-size: 2vi; margin-bottom: .6vi">Blackjack</h1>
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/specialblackjack.py" target="_blank"><img src="blackjack.png" class="projectpic"></a>
+            <h1 class="projecttext">Blackjack</h1>
             <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png">
         </div> 
 
         <div class="made" id="wheel">
-            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/wheel.py" target="_blank"><img src="wheel.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
-            <h1 style="margin-top: .6vi; font-size: 1.6vi; margin-bottom: .6vi">Wheel of Fortune</h1>
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/wheel.py" target="_blank"><img src="wheel.png" class="projectpic"></a>
+            <h1 class="projecttext">Wheel of Fortune</h1>
             <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png">
         </div> 
 
         <div class="made" id="tictactoe">
-            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/tkintertictictoe(remaster).py" target="_blank"><img src="tictactoe.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
-            <h1 style="margin-top: .6vi; font-size: 2vi; margin-bottom: .6vi">Tictactoe</h1>
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/tkintertictictoe(remaster).py" target="_blank"><img src="tictactoe.png" class="projectpic"></a>
+            <h1 class="projecttext">Tictactoe</h1>
             <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png">
         </div> 
-        <div class="made" id="htmlslots">
-            <a href="htmlslotmachine.html" target="_blank"><img src="htmlslots.png" style="height: 6vi; width: 13vi; border: 2px solid black; margin-top: 2vh;"></a>
-            <h1 style="margin-top: .6vi; font-size: 1.5vi; margin-bottom: .6vi">Slot Machine(HTML)</h1>
-            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/html5-512.png">
-            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png">
-            <img class="tinylang" src="https://static-00.iconduck.com/assets.00/javascript-icon-2048x2048-dc9qqnwh.png">
+        <div class="made" id="questremind">
+            <a href="https://github.com/Dawson-Delap/quest-reminders" target="_blank"><img src="questreminder.png" class="projectpic"></a>
+            <h1 class="projecttext">Quest Reminders</h1>
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png">
         </div> 
     </div>
 </body>
