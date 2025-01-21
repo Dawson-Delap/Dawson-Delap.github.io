@@ -125,7 +125,8 @@
         let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
         return match ? match[2] : null;
     }
-    var cookies = parseInt(getCookie("clicks") || 0); 
+    var cookies = 0
+    cookies = parseInt(getCookie("clicks") || 0); 
     
     function clearcookies(){
         document.cookie = "clicks=" + 0 + "; path=/";
