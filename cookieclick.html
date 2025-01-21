@@ -124,16 +124,16 @@
     }
 
     // Get the current cookie value
-    var cookies = parseInt(getCookie("clicks") || 0); 
+    var cookies = parseInt(getCookie("clicks")); 
 
     function addcook() {
         let clickown = 1; // Change this if needed
 
         // Increment the cookie value
         cookies += clickown;
-        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
         // Update the cookie in the browser
-        document.cookie = cookies + "; path=/";
+        document.cookie = "clicks=" + cookies + "; path=/";
 
         // Update the displayed value
         document.getElementById("cookienum").innerHTML = cookies;
