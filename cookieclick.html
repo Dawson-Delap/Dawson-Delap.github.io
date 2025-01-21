@@ -131,7 +131,7 @@
 
         // Increment the cookie value
         cookies += clickown;
-
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         // Update the cookie in the browser
         document.cookie = cookies + "; path=/";
 
