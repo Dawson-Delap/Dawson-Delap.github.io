@@ -147,9 +147,9 @@
         clickown = 100; // Change cookies per click
         document.getElementById("showclick").innerHTML = "Cookies per Click = " + clickown;
     }
+    var clickcost = parseInt(getCookie("clickcost")) || 100;
     document.getElementById("clickbuy").innerHTML = "More Cookies per click = " + clickcost;
     //cookperclick
-        var clickcost = parseInt(getCookie("clickcost")) || 100;
         function addmoreclick() {
             if (cookies >= clickcost) {
                 clickown += 1;
