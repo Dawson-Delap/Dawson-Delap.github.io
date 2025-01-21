@@ -394,8 +394,10 @@
             document.getElementById("cookienum").innerHTML = cookies;
         }
 // website
-        var webown = 0;
-        var webcost = 800;
+        var webown = parseInt(getCookie("webown")) || 0;
+        var webcost = parseInt(getCookie("webcost")) || 800;
+        document.getElementById("webbuy").innerHTML = "Website = " + webcost;
+        document.getElementById("showweb").innerHTML = "Websites = " + webown;
         const webID = setInterval(web, 100);
         function webbuy(){
             if (cookies >= webcost) {
@@ -403,6 +405,8 @@
                 cookies -= webcost;
                 changeColor()
                 webcost += 800;
+                document.cookie = "webown=" + webown + "; path=/";
+                document.cookie = "webcost=" + webcost + "; path=/";
                 document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("webbuy").innerHTML = "Website = " + webcost;
                 document.getElementById("cookienum").innerHTML = cookies;
