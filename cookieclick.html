@@ -262,8 +262,10 @@
     }
     
 //Autoclicker
-        var autoown = 0;
-        var autocost = 25;
+        var autoown = parseInt(getCookie("autoown")) || 0;
+        var autocost = parseInt(getCookie("autocost")) || 25;
+        document.getElementById("autobuy").innerHTML = "Autoclicker = " + autocost;
+        document.getElementById("showauto").innerHTML = "Autoclickers = " + autoown;
         const autoclickerID = setInterval(autoclick, 1000);
     
         function autoclickbuy() {
@@ -272,6 +274,8 @@
                 cookies -= autocost;
                 changeColor()
                 autocost += 25;
+                document.cookie = "autoown=" + autoown + "; path=/";
+                document.cookie = "autocost=" + autocost + "; path=/";
                 document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("autobuy").innerHTML = "Autoclicker = " + autocost;
                 document.getElementById("cookienum").innerHTML = cookies;
@@ -286,8 +290,10 @@
         }
     
 //Grandmas
-        var grandmaown = 0;
-        var grandmacost = 50;
+        var grandmaown = parseInt(getCookie("grandmaown")) || 0;
+        var grandmacost = parseInt(getCookie("grandmaown")) || 50;
+        document.getElementById("grandmabuy").innerHTML = "Grandma = " + grandmacost;
+        document.getElementById("showgrandma").innerHTML = "Grandmas = " + grandmaown;
         const grandmaID = setInterval(grandma, 500);
         function grandmabuy(){
             if (cookies >= grandmacost) {
@@ -295,6 +301,8 @@
                 cookies -= grandmacost;
                 changeColor()
                 grandmacost += 50;
+                document.cookie = "grandmaown=" + grandmaown + "; path=/";
+                document.cookie = "grandmacost=" + grandmacost + "; path=/";
                 document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("grandmabuy").innerHTML = "Grandma = " + grandmacost;
                 document.getElementById("cookienum").innerHTML = cookies;
