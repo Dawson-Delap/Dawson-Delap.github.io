@@ -126,12 +126,13 @@
 
     
     var cookies = parseInt(getCookie("clicks") || 0); 
-    document.cookie = "clickown=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
-    document.cookie = "clicks=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+    
 
     function addcook() {
         // Increment the cookie value
         cookies += clickown;
+        document.cookie = "clickown=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+        document.cookie = "clicks=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
         // Update the cookie in the browser
         document.cookie = "clicks=" + cookies + "; path=/";
         // Update the displayed value
