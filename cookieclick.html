@@ -316,8 +316,10 @@
             document.getElementById("cookienum").innerHTML = cookies;
         }
 //Bakeries
-        var bakeown = 0;
-        var bakecost = 100;
+        var bakeown = parseInt(getCookie("bakeown")) || 0;
+        var bakecost = parseInt(getCookie("bakecost")) || 100;
+        document.getElementById("bakebuy").innerHTML = "Bakeries = " + bakecost;
+        document.getElementById("showbake").innerHTML = "Bakeries = " + bakeown;
         const bakeID = setInterval(bake, 250);
         function bakebuy(){
             if (cookies >= bakecost) {
@@ -325,6 +327,8 @@
                 cookies -= bakecost;
                 changeColor()
                 bakecost += 100;
+                document.cookie = "bakeown=" + bakeown + "; path=/";
+                document.cookie = "bakecost=" + bakecost + "; path=/";
                 document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("bakebuy").innerHTML = "Bakeries = " + bakecost;
                 document.getElementById("cookienum").innerHTML = cookies;
