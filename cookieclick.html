@@ -129,6 +129,7 @@
     cookies = parseInt(getCookie("clicks") || 0); 
     
     function clearcookies(){
+        document.cookie = "cookies=" + 0 + "; path=/";
         document.cookie = "clicks=" + 0 + "; path=/";
         document.cookie = "clickown=" + 1 + "; path=/";
         document.cookie = "clickcost=" + 100 + "; path=/";
