@@ -136,14 +136,13 @@
         document.cookie = "clicks=" + cookies + "; path=/";
 
         // Update the displayed value
-        document.getElementById("cookienum").innerHTML = document.cookie;
+        document.getElementById("cookienum").innerHTML = cookies;
     }
 
-    // Set the initial display value
-    document.getElementById("cookienum").innerHTML = cookies;
 
     function addcook1000() {
         cookies *= 1000;
+        document.cookie = "clicks=" + cookies + "; path=/";
         document.getElementById("cookienum").innerHTML = cookies; // Update displayed cookie count
     }
 
@@ -160,6 +159,7 @@
                 cookies -= clickcost;
                 clickcost += 100;
                 document.getElementById("clickbuy").innerHTML = "More Cookies per click = " + clickcost;
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("cookienum").innerHTML = cookies;
                 document.getElementById("showclick").innerHTML = "Cookies per click = " + clickown;
             }
@@ -270,6 +270,7 @@
                 cookies -= autocost;
                 changeColor()
                 autocost += 25;
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("autobuy").innerHTML = "Autoclicker = " + autocost;
                 document.getElementById("cookienum").innerHTML = cookies;
                 document.getElementById("showauto").innerHTML = "Autoclickers = " + autoown;
@@ -278,6 +279,7 @@
         function autoclick() {
             cookies += autoown;
             changeColor()
+            document.cookie = "clicks=" + cookies + "; path=/";
             document.getElementById("cookienum").innerHTML = cookies;
         }
     
@@ -291,6 +293,7 @@
                 cookies -= grandmacost;
                 changeColor()
                 grandmacost += 50;
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("grandmabuy").innerHTML = "Grandma = " + grandmacost;
                 document.getElementById("cookienum").innerHTML = cookies;
                 document.getElementById("showgrandma").innerHTML = "Grandmas = " + grandmaown;
@@ -299,6 +302,7 @@
         function grandma(){
             cookies += grandmaown;
             changeColor()
+            document.cookie = "clicks=" + cookies + "; path=/";
             document.getElementById("cookienum").innerHTML = cookies;
         }
 //Bakeries
@@ -311,6 +315,7 @@
                 cookies -= bakecost;
                 changeColor()
                 bakecost += 100;
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("bakebuy").innerHTML = "Bakeries = " + bakecost;
                 document.getElementById("cookienum").innerHTML = cookies;
                 document.getElementById("showbake").innerHTML = "Bakeries = " + bakeown;
@@ -319,6 +324,7 @@
         function bake(){
             cookies += bakeown*2;
             changeColor()
+            document.cookie = "clicks=" + cookies + "; path=/";
             document.getElementById("cookienum").innerHTML = cookies;
         }
 // farms
@@ -331,6 +337,7 @@
                 cookies -= farmcost;
                 changeColor()
                 farmcost += 200;
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("farmbuy").innerHTML = "Farms = " + farmcost;
                 document.getElementById("cookienum").innerHTML = cookies;
                 document.getElementById("showfarm").innerHTML = "Farms = " + farmown;
@@ -339,6 +346,7 @@
         function farm(){
             cookies += farmown*3;
             changeColor()
+            document.cookie = "clicks=" + cookies + "; path=/";
             document.getElementById("cookienum").innerHTML = cookies;
         }
 // Factory
@@ -351,6 +359,7 @@
                 cookies -= factcost;
                 changeColor()
                 factcost += 400;
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("factbuy").innerHTML = "Factory = " + factcost;
                 document.getElementById("cookienum").innerHTML = cookies;
                 document.getElementById("showfact").innerHTML = "Factories = " + factown;
@@ -359,6 +368,7 @@
         function fact(){
             cookies += factown*3;
             changeColor()
+            document.cookie = "clicks=" + cookies + "; path=/";
             document.getElementById("cookienum").innerHTML = cookies;
         }
 // website
@@ -371,6 +381,7 @@
                 cookies -= webcost;
                 changeColor()
                 webcost += 800;
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("webbuy").innerHTML = "Website = " + webcost;
                 document.getElementById("cookienum").innerHTML = cookies;
                 document.getElementById("showweb").innerHTML = "Websites = " + webown;
@@ -379,6 +390,7 @@
         function web(){
             cookies += webown*4;
             changeColor()
+            document.cookie = "clicks=" + cookies + "; path=/";
             document.getElementById("cookienum").innerHTML = cookies;
         }
 // duplicator
@@ -391,6 +403,7 @@
                 cookies -= dupcost;
                 changeColor()
                 dupcost *= 2000;
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("dupbuy").innerHTML = "You win!";
                 document.getElementById("cookienum").innerHTML = cookies;
                 document.getElementById("showdup").innerHTML = "You win!";
@@ -400,6 +413,7 @@
             if (dupown > 1){
                 cookies *= dupown*2000000;
                 changeColor()
+                document.cookie = "clicks=" + cookies + "; path=/";
                 document.getElementById("cookienum").innerHTML = cookies;
                 const win = document.getElementById("showdup");
                 win.style.visibility="visible";
