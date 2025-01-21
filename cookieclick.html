@@ -116,23 +116,41 @@
     </div>
     
     <script>
-        var cookies = 0;
         var clickown = 1;
+        // Function to get a specific cookie value
+    function getCookie(name) {
+        let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
 
-        function addcook() {
-            cookies += clickown;
-            document.getElementById("cookienum").innerHTML = cookies;
-        }
+    // Get the current cookie value
+    var cookies = parseInt(getCookie("clicks") || 0); 
 
-        function addcook1000() {
-            cookies *= 1000;
-            document.getElementById("cookienum").innerHTML = cookies; // Update displayed cookie count
-        }
+    function addcook() {
+        let clickown = 1; // Change this if needed
 
-        function addmoreclick() {
-            clickown = 100; // Change cookies per click
-            document.getElementById("showclick").innerHTML = "Cookies per Click = " + clickown;
-        }
+        // Increment the cookie value
+        cookies += clickown;
+
+        // Update the cookie in the browser
+        document.cookie = "clicks=" + cookies + "; path=/";
+
+        // Update the displayed value
+        document.getElementById("cookienum").innerHTML = cookies;
+    }
+
+    // Set the initial display value
+    document.getElementById("cookienum").innerHTML = cookies;
+
+    function addcook1000() {
+        cookies *= 1000;
+        document.getElementById("cookienum").innerHTML = cookies; // Update displayed cookie count
+    }
+
+    function addmoreclick() {
+        clickown = 100; // Change cookies per click
+        document.getElementById("showclick").innerHTML = "Cookies per Click = " + clickown;
+    }
     //cookperclick
         var clickown = 1;
         var clickcost = 100;
