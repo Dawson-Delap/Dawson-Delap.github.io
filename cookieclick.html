@@ -118,6 +118,7 @@
     <script>
         var clickown = 1;
         clickown = parseInt(getCookie("clickown")) || 1;
+        document.cookie = "clicks=" + 0 + "; path=/";
         // Function to get a specific cookie value
     function getCookie(name) {
         let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -129,10 +130,9 @@
     
 
     function addcook() {
+        document.cookie = "clicks=" + 0 + "; path=/";
         // Increment the cookie value
         cookies += clickown;
-        document.cookie = "clickown=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
-        document.cookie = "clicks=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
         // Update the cookie in the browser
         document.cookie = "clicks=" + cookies + "; path=/";
         // Update the displayed value
