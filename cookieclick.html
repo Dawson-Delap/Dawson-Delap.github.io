@@ -118,13 +118,12 @@
     <script>
         var clickown = 1;
         clickown = parseInt(getCookie("clickown")) || 1;
+        document.getElementById("showclick").innerHTML = "Cookies per Click = " + clickown;
         // Function to get a specific cookie value
     function getCookie(name) {
         let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
         return match ? match[2] : null;
     }
-
-    
     var cookies = parseInt(getCookie("clicks") || 0); 
     
 
@@ -148,8 +147,9 @@
         clickown = 100; // Change cookies per click
         document.getElementById("showclick").innerHTML = "Cookies per Click = " + clickown;
     }
+    document.getElementById("clickbuy").innerHTML = "More Cookies per click = " + clickcost;
     //cookperclick
-        var clickcost = 100;
+        var clickcost = parseInt(getCookie("clickcost")) || 100;
         function addmoreclick() {
             if (cookies >= clickcost) {
                 clickown += 1;
@@ -158,6 +158,7 @@
 
                 // Update cookies
                 document.cookie = "clickown=" + clickown + "; path=/";
+                document.cookie = "clickcost=" + clickcost + "; path=/";
                 document.cookie = "cookies=" + cookies + "; path=/";
 
                 // Update UI elements
