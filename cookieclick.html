@@ -343,7 +343,9 @@
         }
 // farms
         var farmown = parseInt(getCookie("farmown")) || 0;
-        var farmcost = parseInt(getCookie("farmown")) || 200;
+        var farmcost = parseInt(getCookie("farmcost")) || 200;
+        document.getElementById("farmbuy").innerHTML = "Farms = " + farmcost;
+        document.getElementById("showfarm").innerHTML = "Farms = " + farmown;
         const farmID = setInterval(farm, 250);
         function farmbuy(){
             if (cookies >= farmcost) {
@@ -367,7 +369,9 @@
         }
 // Factory
         var factown = parseInt(getCookie("factown")) || 0;
-        var factcost = parseInt(getCookie("factown")) || 400;
+        var factcost = parseInt(getCookie("factcost")) || 400;
+        document.getElementById("factbuy").innerHTML = "Factory = " + factcost;
+        document.getElementById("showfact").innerHTML = "Factories = " + factown;
         const factID = setInterval(fact, 100);
         function factbuy(){
             if (cookies >= factcost) {
