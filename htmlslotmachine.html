@@ -80,9 +80,10 @@ div{
             document.getElementById("spinbut").disabled = false;
         }
         const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
-
+        document.getElementById("moneyshow").innerHTML = "$" + money;
         const spin = async() => {
             money -= 10
+            document.getElementById("moneyshow").innerHTML = "$" + money;
             disablebut();
             for (let i = 0; i < pics.length; i++){
                 const slot1 = document.getElementById("slot1");
