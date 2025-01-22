@@ -45,7 +45,8 @@ div{
 </head>
 <body>
     <script>
-        var money = parseInt(getCookie("money")) || 0; 
+        var money = 0;
+        money = parseInt(getCookie("money")); 
         function getCookie(name) {
             let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
             return match ? match[2] : null;
