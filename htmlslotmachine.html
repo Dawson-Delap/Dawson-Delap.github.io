@@ -45,6 +45,12 @@ div{
 </head>
 <body>
     <script>
+        var money = 0
+        money = parseInt(getCookie("money") || 0); 
+        function getCookie(name) {
+            let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return match ? match[2] : null;
+        }
         var gains = "";
         var count = 0;
         var inf = 0;
@@ -101,7 +107,7 @@ div{
                 slot3.style.background = col[slot3pic];
                 await sleep(100)
             }
-            
+            document.cookie = "money=" + money + "; path=/";
             if(slot1.innerHTML == slot2.innerHTML && slot2.innerHTML == slot3.innerHTML){
                 money += 1000;
                 document.getElementById("moneyshow").innerHTML = "$" + money;
