@@ -47,8 +47,6 @@ div{
     <script>
         var money = 0;
         money = parseInt(getCookie("money")) || 0; 
-        var gains = "";
-        gains = parseInt(getCookie("gains")) || ""; 
         var count = 0;
         count = parseInt(getCookie("count")) || 0; 
         function getCookie(name) {
@@ -128,7 +126,6 @@ div{
                 spin();
             }
             document.cookie = "money=" + money + "; path=/";
-            document.cookie = "gains=" + gains + "; path=/";
             document.cookie = "count=" + count + "; path=/";
         }
         function infinite(){
