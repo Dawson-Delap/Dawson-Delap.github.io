@@ -240,10 +240,36 @@
         #langdiv{display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh; flex-wrap: wrap;}
         #thingsdiv{flex-wrap: wrap;}
         #iosSlots{margin-bottom: 3vh}
+        #menubar{display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh; flex-wrap: wrap;
+                 position: fixed;
+                 background-color: grey;
+                 top: 0px;
+                 left: 0px;
+                 width: 100%;
+                 height: 5%;
+                 }
+        #menutext{font-size: 20px;
+                  margin-top: 5px;}
     }
     </style>
 </head>
 <body id="body">
+    <div id = "menubar">
+        <button onclick="scrollToLanguages()" id="menutext">Languages</button>
+        <button onclick="scrollToCert()" id="menutext">Certifications</button>
+        <button onclick="scrollToThings()" id="menutext">Things I Made</button>
+    </div>
+    <script>
+        function scrollToLanguages() {
+            document.getElementById("langtitle").scrollIntoView({ behavior: "smooth" });
+        }
+        function scrollToCert() {
+            document.getElementById("certtitle").scrollIntoView({ behavior: "smooth" });
+        }
+        function scrollToThings() {
+            document.getElementById("thingstitle").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
     <div id="intro">
         <h1 id="name">Dawson Delap</h1>
         <a href="https://www.linkedin.com/in/dawson-delap-b54045328/" target="_blank"><img class="big" id="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin"></a>
