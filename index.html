@@ -240,29 +240,63 @@
         #langdiv{display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh; flex-wrap: wrap;}
         #thingsdiv{flex-wrap: wrap;}
         #iosSlots{margin-bottom: 3vh}
-        #menubar{display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh; flex-wrap: wrap;
-                 position: fixed;
-                 background-color: grey;
-                 top: 0px;
-                 left: 0px;
-                 width: 100%;
-                 height: 6%;
-                 }
-        #menutext{font-size: 15px;
-                  width: 150px;
-                  height: 30px;
-                  margin-top: 5px;
-                  border-radius: 10px;
-                  background-color:chocolate;
-                  margin-left: 4px;}
+        #menudiv {
+                background-color: rgba(128, 128, 128, 0.5); /* Applies opacity to the wrapper, not the text */
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 90%;
+                height: 6%;
+                border-radius: 10px;
+                margin-left: 5%;
+                margin-right: 5%;
+                backdrop-filter: blur(10px);
+            }
+
+            #menubar {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                margin-bottom: 5vh;
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            #menutext {
+                font-size: 15px;
+                width: 150px;
+                height: 30px;
+                margin-top: 8px;
+                border-radius: 10px;
+                margin-left: 4px;
+                background-color: rgba(255, 191, 0, 0.7); /* Applies opacity to the wrapper, not the text */
+                backdrop-filter: blur(10px);
+                border-width: 1px;
+                border-style: solid;
+            }
+            #aboutbut{
+                text-align: center;
+                font-size: 25px;
+                width: 100px;
+                height: 30px;
+                margin-top: 8px;
+                border-radius: 10px;
+                margin-left: 4px;
+                background-color: rgba(128, 128, 128, 0.7); /* Applies opacity to the wrapper, not the text */
+                backdrop-filter: blur(10px);
+                border-width: 1px;
+                border-style: solid;
+                margin-left: 3.5vw;}
     }
     </style>
 </head>
 <body id="body">
-    <div id = "menubar">
-        <button onclick="scrollToLanguages()" id="menutext">Languages</button>
-        <button onclick="scrollToCert()" id="menutext">Certifications</button>
-        <button onclick="scrollToThings()" id="menutext">Things I Made</button>
+    <div id="menudiv">
+        <nav id = "menubar">
+                <button onclick="scrollToLanguages()" id="menutext" class = "big">Languages</button>
+                <button onclick="scrollToCert()" id="menutext" class = "big">Certifications</button>
+                <button onclick="scrollToThings()" id="menutext" class = "big">Things I Made</button>
+        </nav>
     </div>
     <script>
         function scrollToLanguages() {
@@ -279,16 +313,8 @@
         <h1 id="name">Dawson Delap</h1>
         <a href="https://www.linkedin.com/in/dawson-delap-b54045328/" target="_blank"><img class="big" id="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="linkedin"></a>
         <a href="https://github.com/Dawson-Delap" target="_blank"><img class="big" id="github" src="https://sue.eu/wp-content/uploads/sites/6/2022/11/github-logo-920x920-sue-v01.png" alt="github"></a>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-        <script>
-            function onSubmit(token) {
-              document.getElementById("demo-form").submit();
-            }
-          </script>
-          <button class="g-recaptcha" 
-          data-sitekey="6LcPnuIqAAAAAKg_pZbUiQEvrpFcYZAvEylxCbkA" 
-          data-callback='onSubmit' 
-          data-action='submit'>Submit</button>
+        <a href="https://www.codewars.com/users/Dawson-Delap" target="_blank"><img class="big" id="github" src="codewars.svg" alt="codewars"></a>
+        <a href="Dawson_Delap_Resume.pdf" target="_blank"><h1 class="big" id="aboutbut">Resume</h1></a>
     </div>
 <!--Languagues-->
     <div id="Languages" class="center">
