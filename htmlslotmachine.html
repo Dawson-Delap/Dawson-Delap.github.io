@@ -49,6 +49,7 @@ div{
         money = parseInt(getCookie("money")) || 0; 
         var count = 0;
         count = parseInt(getCookie("count")) || 0; 
+        var gaintext
         function getCookie(name) {
             let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
             return match ? match[2] : null;
@@ -112,7 +113,7 @@ div{
             if(slot1.innerHTML == slot2.innerHTML && slot2.innerHTML == slot3.innerHTML){
                 money += 1000;
                 document.getElementById("moneyshow").innerHTML = "$" + money;
-                var gaintext = "+$1000 on roll " + count + "<br>" + gains;
+                gaintext = "+$1000 on roll " + count + "<br>" + gains;
                 document.getElementById("lastgain").innerHTML = gaintext;
                 gains = document.getElementById("lastgain").innerHTML;
             }else{
@@ -165,7 +166,7 @@ div{
     <h1 id="moneyshow">$0</h1>
     <h1 id="rolls">Rolls: </h1>
     <h1>Gains:</h1>
-    <h1 id="lastgain"></h1>
+    <h1 id="lastgain">Last Gain</h1>
 </div>
 <!--bottom info^-->
 </body>
