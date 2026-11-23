@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--390 844-->
+    <style>
+    @media only screen and (min-width: 481px) {
+        h1{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-text-stroke-width: .1vi;
+            -webkit-text-stroke-color: black;
+        }
+        .lang:hover{
+            background-color: red;
+            animation-name: colors;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        .lang{
+            height: 17vi;
+            width: 17vi; 
+            border: 5px solid black;
+        }
+        .langtext{
+            font-size: 2vi;
+            margin-top: 1vi;
+            opacity: 0%;
+            margin-top: auto;
+        }
+        .cert:hover{
+            transform: scale(1.3);
+        }
+        .cert{
+            height: 15vi;
+            width: 20vi;
+            border: 5px solid black;
+            border-radius: 20px;
+            transition: transform 330ms ease-in-out;
+        }
+        .made:hover{
+            transform: scale(1.3);
+        }
+        .made{
+            transition: transform 330ms ease-in-out;
+            height: 23vi; 
+            width: 27vi; 
+            background-color: grey; 
+            border-radius: 20px; 
+            border: 5px solid black; 
+            justify-content: center; 
+            align-items: center;
+            display: block;
+
+        }
+        .tinylang{
+            height: 2.7vi;
+            width: 2.7vi;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-top: 1px;
+        }
+        .centerdiv{
+            display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh;
+        }
+        .big{
+            transition: transform 330ms ease-in-out;
+        }
+        .big:hover{
+            transform: scale(1.3);
+        }
+        
+
+        @keyframes colors {
+        0%   {background:  red;}
+        20%  {background: orange;}
+        40%  {background: yellow;}
+        60% {background: limegreen;}
+        80% {background: cyan;}
+        100% {background: purple;}
+        
+        }
+
+        #software{
+            
+            height: 18vi; width: 24vi;
+        }
+
+        #body{
+            background-image: url('Blackhole.jpg');
+            background-color: black;
+            text-align: center; background-repeat:no-repeat; background-size: cover; background-attachment: fixed;
+        }
+        #intro{height: 70vh; text-align: left;}
+        #name{margin-left: 3vw; font-size: 5vi; margin-top: 30vh; margin-bottom: auto;}
+        #linkedin{height: 2vi; width: 2vi; margin-left: 4vw; border-radius: 20px; margin-top: auto;}
+        #github{height: 2vi; width: 2vi; margin-left: 1vw; background-color: grey; border-radius: 20px;}
+        #languages{height: 70vh;}
+        #langtitle{margin-bottom: 5vh; font-size: 3vi;}
+        #python{background: grey; border-radius: 70px;}
+
+        .center{
+            text-align: center;
+        }
+        #HTML{background:grey; border-radius: 70px;}
+        #CSS{background: grey; border-radius: 70px;}
+        #JS{background:grey; border-radius: 70px;}
+        #SQL{background: grey; border-radius: 70px; object-fit:contain;}
+        #cpp{background: grey; border-radius: 70px;}
+        #swift{background: grey; border-radius: 70px;}
+        #certdiv{margin-bottom: 10vh;}
+        #thingstitle{margin-bottom: 5vh; font-size: 3vi;}
+        .projecttext{margin-top: .6vi; font-size: 2.7vi; margin-bottom: .6vi}
+        .projectpic{height: 12vi; width: 24vi; border: 2px solid black; margin-top: 2vh;}
+        #certtitle{font-size: 3vi;}
+        #langdiv{display: flex; justify-content: center; align-items: flex-start; margin-bottom: 5vh; flex-wrap: wrap;}
+        #thingsdiv{flex-wrap: wrap;}
+        #iosSlots{margin-bottom: 3vh}
+        #menudiv {
+                background-color: rgba(128, 128, 128, 0.5); /* Applies opacity to the wrapper, not the text */
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 90%;
+                height: 6%;
+                border-radius: 10px;
+                margin-left: 5%;
+                margin-right: 5%;
+                backdrop-filter: blur(10px);
+            }
+
+            #menubar {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                margin-bottom: 5vh;
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            #menutext {
+                font-size: 15px;
+                width: 150px;
+                height: 30px;
+                margin-top: 8px;
+                border-radius: 10px;
+                margin-left: 4px;
+                background-color: rgba(255, 191, 0, 0.7); /* Applies opacity to the wrapper, not the text */
+                backdrop-filter: blur(10px);
+                border-width: 1px;
+                border-style: solid;
+            }
+            #aboutbut{
+                text-align: center;
+                font-size: 5vi;
+                width: 12vi;
+                height: 12vi;
+                margin-top: 8px;
+                border-radius: 10px;
+                margin-left: 4px;
+                background-color: rgba(128, 128, 128, 0.7); /* Applies opacity to the wrapper, not the text */
+                backdrop-filter: blur(10px);
+                border-width: 1px;
+                border-style: solid;
+                margin-left: 3.5vw;}
+    }
+    </style>
+</head>
+<body id="body">
+    <div id="menudiv">
+        <nav id = "menubar">
+                <button onclick="scrollToLanguages()" id="menutext" class = "big">Languages</button>
+                <button onclick="scrollToCert()" id="menutext" class = "big">Certifications</button>
+                <button onclick="scrollToThings()" id="menutext" class = "big">Things I Made</button>
+        </nav>
+    </div>
+    <script>
+        function scrollToLanguages() {
+            document.getElementById("langtitle").scrollIntoView({ behavior: "smooth" });
+        }
+        function scrollToCert() {
+            document.getElementById("certtitle").scrollIntoView({ behavior: "smooth" });
+        }
+        function scrollToThings() {
+            document.getElementById("thingstitle").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    <div id="intro">
+        <h1 id="name">Dawson Delap</h1>
+        <a href="https://www.linkedin.com/in/dawson-delap-b54045328/" target="_blank"><img class="big" id="linkedin" src="LinkedIn_icon.png" alt="linkedin"></a>
+        <a href="https://github.com/Dawson-Delap" target="_blank"><img class="big" id="github" src="github logo.png" alt="github"></a>
+        <a href="https://www.codewars.com/users/Dawson-Delap" target="_blank"><img class="big" id="github" src="codewars.svg" alt="codewars"></a>
+    </div>
+<!--Languagues-->
+    <div id="Languages" class="center">
+        <h1 id="langtitle">Languages</h1>
+        <div class="centerdiv" id="langdiv">
+            <div class="big" class="center">
+                <img onmousemove=showpy() onmouseleave=hidepy() class="lang" src="Python.png"
+                alt="python" id="python">
+                <h1 class="langtext" id="pythonh1">Python</h1>
+            </div>
+
+            <div class="big" class="center">
+                <img onmousemove=showhtml() onmouseleave=hidehtml()  class="lang" src="HTML.png"
+                alt="html" id="HTML">
+                <h1 class="langtext" id="htmlh1">HTML5</h1>
+            </div>
+
+            <div class="big" class="center">
+                <img onmousemove=showcss() onmouseleave=hidecss() class="lang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
+                alt="css" id="CSS">
+                <h1 class="langtext" id="cssh1">CSS</h1>
+            </div>
+
+            <div class="big" class="center">
+                <img onmousemove=showjs() onmouseleave=hidejs() class="lang" src="Javascript.png"
+                alt="js" id="JS">
+                <h1 class="langtext" id="jsh1">JavaScript</h1>
+            </div>
+            <br>
+            <div class="big" class="center">
+                <img  onmousemove=showsql() onmouseleave=hidesql() class="lang" src="SQL.png"
+                alt="sql" id="SQL">
+                <h1 class="langtext" id="sqlh1">SQL</h1>
+            </div>
+
+            <div class="big" class="center">
+                <img onmousemove=showcpp() onmouseleave=hidecpp() class="lang" src="https://cdn-icons-png.flaticon.com/256/6132/6132222.png"
+                alt="cpp" id="cpp">
+                <h1 class="langtext" id="cpph1">C++</h1>
+            </div>
+
+            <div class="big" class="center">
+                <img onmousemove=showswift() onmouseleave=hideswift() class="lang" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png"
+                alt="swift" id="swift">
+                <h1 class="langtext" id="swifth1">Swift</h1>
+            </div>
+        </div>
+
+        <script>
+            function showpy(){
+                const pythonid = document.getElementById("pythonh1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hidepy(){
+                const pythonid = document.getElementById("pythonh1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+
+            function showhtml(){
+                const pythonid = document.getElementById("htmlh1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hidehtml(){
+                const pythonid = document.getElementById("htmlh1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+
+            function showcss(){
+                const pythonid = document.getElementById("cssh1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hidecss(){
+                const pythonid = document.getElementById("cssh1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+
+            function showjs(){
+                const pythonid = document.getElementById("jsh1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hidejs(){
+                const pythonid = document.getElementById("jsh1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+
+            function showsql(){
+                const pythonid = document.getElementById("sqlh1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hidesql(){
+                const pythonid = document.getElementById("sqlh1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+
+            function showcpp(){
+                const pythonid = document.getElementById("cpph1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hidecpp(){
+                const pythonid = document.getElementById("cpph1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function showswift(){
+                const pythonid = document.getElementById("swifth1");
+                pythonid.style.opacity= "100%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+            function hideswift(){
+                const pythonid = document.getElementById("swifth1");
+                pythonid.style.opacity= "0%";
+                pythonid.style.transition= "opacity 0.5s";
+            }
+        </script>
+    </div>
+<!--Certification-->
+    <div>
+        <h1 id="certtitle">Certifications</h1>
+        <img class="cert" id="software" src="DD_sofwaredev.jpg">
+        <img class="cert" id="software" src="CompTIA A+ ce certificate_page-0001.jpg">
+    </div>
+    <div id="certdiv">
+        <img class="cert" src="DD_Certificate of Arizona Technical Skills Standards-1.png">
+        <img class="cert" src="DD_IT_Essentials_certificate_dawsondelap97-gmail-com_bc6e3b96-1a6a-4f9b-a013-ce37a02ef7bd.png">
+        <img class="cert" src="DD_Python_Aug 28.jpg">
+        <img class="cert" src="DD_Certificate.jpg">
+        <img class="cert" src="DD_CPP_Oct21.jpg">
+        <img class="cert" src="DD_HTML-CSS_Sep6.jpg">
+        <img class="cert" src="DD_JavaScript_Sep10.jpg">
+        <img class="cert" src="DD_HTML5Applications_Sept26.jpg">
+        <img class="cert" src="DD_Computational-Thinking_Sept19.jpg">
+        <img class="cert" src="DD_Databases_Sep23 (1).jpg">
+        <img class="cert" src="DD_Artificial-Intelligence_May1-1.png">
+        <img class="cert" src="DD_Data-Analytics_Dec6.jpg">
+        <img class="cert" src="DD_DCM_Oct15.jpg">
+    </div>
+<!--Things I made-->
+    <h1 id="thingstitle">Things I Made</h1>
+    <div class="centerdiv" id="thingsdiv">
+        <!-- template for new project
+        <div class="made" id="PROJECT ID">
+            <a href="LINK TO PROJECT" target="_blank"><img src="SCREENSHOT" class="projectpic"></a>
+            <h1 class="projecttext">TEXT FOR PROJECT</h1>
+            <img class="tinylang" src="LANG PICTURE">
+            <img class="tinylang" src="LANG PICTURE">
+        </div> 
+        -->
+        <div class="made" id="cookieclicker">
+            <a href="cookieclick.html" target="_blank"><img src="cookieclicker.png" class="projectpic"></a>
+            <h1 class="projecttext">Cookieclicker</h1>
+            <img class="tinylang" src="HTML.png">
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png">
+            <img class="tinylang" src="Javascript.png">
+        </div>
+        <div class="made" id="htmlslots">
+            <a href="htmlslotmachine.html" target="_blank"><img src="htmlslots.png" class="projectpic"></a>
+            <h1 class="projecttext">HTML Slot Machine</h1>
+            <img class="tinylang" src="HTML.png">
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png">
+            <img class="tinylang" src="Javascript.png">
+        </div> 
+        <div class="made" id="discord">
+            <a href="https://github.com/Dawson-Delap/Website_Scraper" target="_blank"><img src="Discordbot.png" class="projectpic"></a>
+            <h1 class="projecttext">Website Scrapper</h1>
+            <img class="tinylang" src="Python.png">
+            <img class="tinylang" src="HTML.png">
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png">
+        </div> 
+        <div class="made" id="slotmachine">
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/slotmachine.py" target="_blank"><img src="slots.png" class="projectpic"></a>
+                <h1 class="projecttext">Python Slotmachine</h1>
+                <img class="tinylang" src="Python.png">
+        </div> 
+
+        <div class="made" id="rpc">
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/rockpaperscissors(remaster).py" target="_blank"><img src="rpc.png" class="projectpic"></a>
+            <h1 class="projecttext">Rock Paper Scissors</h1>
+            <img class="tinylang" src="Python.png">
+        </div> 
+
+        <div class="made" id="blackjack">
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/specialblackjack.py" target="_blank"><img src="blackjack.png" class="projectpic"></a>
+            <h1 class="projecttext">Blackjack</h1>
+            <img class="tinylang" src="Python.png">
+        </div> 
+
+        <div class="made" id="wheel">
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/wheel.py" target="_blank"><img src="wheel.png" class="projectpic"></a>
+            <h1 class="projecttext">Wheel of Fortune</h1>
+            <img class="tinylang" src="Python.png">
+        </div> 
+
+        <div class="made" id="tictactoe">
+            <a href="https://github.com/Dawson-Delap/Things-I-made/blob/master/tkintertictictoe(remaster).py" target="_blank"><img src="tictactoe.png" class="projectpic"></a>
+            <h1 class="projecttext">Tictactoe</h1>
+            <img class="tinylang" src="Python.png">
+        </div> 
+        <div class="made" id="cppslots">
+            <a href="https://github.com/Dawson-Delap/C-plus-plus/blob/main/Slot%20machine/slots.cpp" target="_blank"><img src="Cpp-Slot-Machine.png" class="projectpic"></a>
+            <h1 class="projecttext">C++ Slot Machine</h1>
+            <img class="tinylang" src="https://cdn-icons-png.flaticon.com/256/6132/6132222.png">
+        </div> 
+        <div class="made" id="cookie">
+            <a href="https://github.com/Dawson-Delap/Cookie-App" target="_blank"><img src="cookieApp.png" class="projectpic"></a>
+            <h1 class="projecttext">Cookie App</h1>
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png">
+        </div> 
+        <div class="made" id="questremind">
+            <a href="https://github.com/Dawson-Delap/quest-reminders" target="_blank"><img src="questreminder.png" class="projectpic"></a>
+            <h1 class="projecttext">Quest Reminders</h1>
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png">
+        </div> 
+        <div class="made" id="iosSlots">
+            <a href="https://github.com/Dawson-Delap/IOS-Slot-Machine" target="_blank"><img src="ios-slot-machine.png" class="projectpic"></a>
+            <h1 class="projecttext">IOS Slot Machine</h1>
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png">
+        </div> 
+        <div class="made" id="Gambling">
+            <a href="https://github.com/Dawson-Delap/watch-gambling" target="_blank"><img src="gambling.png" class="projectpic"></a>
+            <h1 class="projecttext">Gambling</h1>
+            <img class="tinylang" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png">
+        </div> 
+    </div>
+</body>
+</html>
